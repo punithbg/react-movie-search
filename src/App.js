@@ -9,7 +9,10 @@ import RemoveFavourites from "./components/RemoveFavourites";
 import Loadings from "./components/Loadings";
 import Error from "./components/Error";
 
-function makeDelay(ms) {
+
+
+const App = () => {
+  function makeDelay(ms) {
   var timer = 0;
   return function (callback) {
     clearTimeout(timer);
@@ -17,8 +20,7 @@ function makeDelay(ms) {
   };
 }
 const delay = makeDelay(500);
-
-const App = () => {
+  
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [favourite, setFavourite] = useState([]);
